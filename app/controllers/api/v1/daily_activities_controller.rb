@@ -1,4 +1,4 @@
-class DailyActivitiesController < ApplicationController
+class Api::V1::DailyActivitiesController < ApplicationController
   before_action :set_daily_activity, only: [:show, :update, :destroy]
 
   # GET /daily_activities
