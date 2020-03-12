@@ -4,14 +4,14 @@ class Api::V1::DailyActivitiesController < ApplicationController
 
   # GET /daily_activities
   def index
-    @daily_activities = DailyActivity.all
+    daily_activities = DailyActivity.all
 
-    render json: @daily_activities
+    render json: daily_activities
   end
 
   # GET /daily_activities/1
   def show
-    render json: @daily_activity
+    render json: daily_activity
   end
 
   # POST /daily_activities
@@ -27,22 +27,22 @@ class Api::V1::DailyActivitiesController < ApplicationController
 
   # PATCH/PUT /daily_activities/1
   def update
-    if @daily_activity.update(daily_activity_params)
-      render json: @daily_activity
+    if daily_activity.update(daily_activity_params)
+      render json: daily_activity
     else
-      render json: @daily_activity.errors, status: :unprocessable_entity
+      render json: daily_activity.errors, status: :unprocessable_entity
     end
   end
 
   # DELETE /daily_activities/1
   def destroy
-    @daily_activity.destroy
+    daily_activity.destroy
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_daily_activity
-      @daily_activity = DailyActivity.find(params[:id])
+      daily_activity = DailyActivity.find(params[:id])
     end
 
     def set_dog
