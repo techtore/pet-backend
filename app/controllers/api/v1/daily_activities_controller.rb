@@ -51,6 +51,6 @@ class Api::V1::DailyActivitiesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def daily_activity_params
-      params.require(:daily_activity).permit(:name, :kind, :date, :description, :dog_id)
+      params.require(:daily_activity).permit(:name, :kind, :date, :description, :dog_id, :time)
     end
 end
