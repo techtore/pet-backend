@@ -16,7 +16,7 @@ class Api::V1::DailyActivitiesController < ApplicationController
 
   # POST /daily_activities
   def create
-    daily_activity = dog.daily_activities.new(daily_activity_params)
+    daily_activity = daily_activities.new(daily_activity_params)
 
     if daily_activity.save
       render json: daily_activity, status: :created, location: daily_activity
@@ -46,7 +46,7 @@ class Api::V1::DailyActivitiesController < ApplicationController
     end
 
     def set_dog
-      dog = Dog.find_by(id: params[:id])
+      @dog = Dog.find_by(id: params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
