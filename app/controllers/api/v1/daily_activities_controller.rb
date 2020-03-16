@@ -1,5 +1,5 @@
 class Api::V1::DailyActivitiesController < ApplicationController
-  before_action :set_daily_activity, only: [:show, :update, :destroy]
+  before_action :set_daily_activity, only: [:show, :update, :create, :destroy]
   before_action :set_dog
 
   # GET /daily_activities

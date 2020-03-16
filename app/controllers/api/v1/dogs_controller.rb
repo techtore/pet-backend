@@ -10,7 +10,7 @@ class Api::V1::DogsController < ApplicationController
 
   # GET /dogs/1
   def show
-    render json: dog
+    render json: @dog
   end
 
   # POST /dogs
