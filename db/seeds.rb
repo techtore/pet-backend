@@ -6,4 +6,4 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
  dog = Dog.create(name: 'Benny', age: '4', weight: '26', breed: 'French Bulldog')
- daily_activity = DailyActivity.create(dog_id: 1, name: 'Walk', kind: 'Exercise', date: Date.today, description: 'Walked to waterfront and back')
+ daily_activity = DailyActivity.create(dog_id: 1, name: 'Walk', kind: 'Exercise', date: "03/16/20", description: 'Walked to waterfront and back')
