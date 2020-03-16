@@ -1,10 +1,9 @@
 class Api::V1::DailyActivitiesController < ApplicationController
-  before_action :set_daily_activity, only: [:show, :update, :create, :destroy]
   before_action :set_dog
 
   # GET /daily_activities
   def index
-    daily_activities = DailyActivity.all
+    daily_activities = @dog.DailyActivity.all
 
     render json: daily_activities
   end
@@ -46,7 +45,7 @@ class Api::V1::DailyActivitiesController < ApplicationController
     end
 
     def set_dog
-      @dog = Dog.find_by(id: params[:id])
+      @dog = Dog.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
