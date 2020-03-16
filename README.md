@@ -1,24 +1,28 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+DogTrax is a React application for keeping track of your dog's daily activities.
 
-Things you may want to cover:
+# Note
+This is onlu the back end of the application. Please also install the frontend located https://github.com/techtore/pet-frontend, and follow its README for installation instructions.
 
-* Ruby version
+# Installation
+Use the package manager bundle install to install all the necessary dependencies while inside the root of the pet-backend folder.
 
-* System dependencies
+` bundle install `
 
-* Configuration
+Then run migrations to allow for proper data storage.
 
-* Database creation
+`rails db:migrate`
 
-* Database initialization
+# Usage
 
-* How to run the test suite
+Start up the local server with 
+` rails s -p 3000`
 
-* Services (job queues, cache servers, search engines, etc.)
+# Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-* Deployment instructions
+Please make sure to update tests as appropriate.
 
-* ...
+# License
+[MIT](https://choosealicense.com/licenses/mit/)
