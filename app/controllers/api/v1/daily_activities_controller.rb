@@ -16,7 +16,7 @@ class Api::V1::DailyActivitiesController < ApplicationController
 
   # POST /daily_activities
   def create
-    daily_activity = daily_activities.new(daily_activity_params)
+    daily_activity = @dog.daily_activities.new(daily_activity_params)
 
     if daily_activity.save
       render json: daily_activity, status: :created, location: daily_activity
