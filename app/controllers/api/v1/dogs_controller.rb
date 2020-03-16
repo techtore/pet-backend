@@ -1,5 +1,5 @@
 class Api::V1::DogsController < ApplicationController
-  before_action :set_dog, only: [:show, :create, :update, :destroy]
+  before_action :set_dog, only: [:show, :update, :destroy]
 
   # GET /dogs
   def index
@@ -15,12 +15,12 @@ class Api::V1::DogsController < ApplicationController
 
   # POST /dogs
   def create
-    @dog = Dog.new(dog_params)
+    dog = Dog.new(dog_params)
 
-    if @dog.save
-      render json: @dog, status: :created, location: @dog
+    if dog.save
+      render json: dog, status: :created, location: @dog
     else
-      render json: @dog.errors, status: :unprocessable_entity
+      render json: dog.errors, status: :unprocessable_entity
     end
   end
 
@@ -46,6 +46,6 @@ class Api::V1::DogsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def dog_params
-      params.require(:dog).permit(:name, :age, :weight, :breed)
+      params.require(:dog).permit(:name, :age, :weight, :breed, :id)
     end
 end
