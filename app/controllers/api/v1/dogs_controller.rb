@@ -1,5 +1,5 @@
 class Api::V1::DogsController < ApplicationController
-  before_action :set_dog, only: [:show, :update, :destroy]
+  before_action :set_dog, only: [:show, :create, :update, :destroy]
 
   # GET /dogs
   def index
