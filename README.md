@@ -3,7 +3,7 @@
 DogTrax is a React application for keeping track of your dog's daily activities.
 
 # Note
-This is onlu the back end of the application. Please also install the frontend located https://github.com/techtore/pet-frontend, and follow its README for installation instructions.
+This is only the back end of the application. Please also install the frontend located https://github.com/techtore/pet-frontend, and follow its README for installation instructions.
 
 # Installation
 Use the package manager bundle install to install all the necessary dependencies while inside the root of the pet-backend folder.
